@@ -5,16 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
 @Getter
 public class User {
-    private Long user_sequence_id;
+    private Long user_sequence_id = 0L;
     private String user_id;
     private String user_pw;
 
-    public User(String user_id, String user_pw) {
-        this.user_id = user_id;
-        this.user_pw = user_pw;
+
+    public void setUser_sequence_id(Long user_sequence_id) {
+        this.user_sequence_id = user_sequence_id;
     }
-
-
 }
